@@ -3,11 +3,10 @@
   "version": "1.0.1",
   "private": true,
   "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
-    "url": "https://github.com/sanidhyy"
+    "name": "Harry Lim",
+    "url": "https://github.com/runehand"
   },
-  "description": "Ethan Smith is a Full-stack web developer with 10+ years of experience.",
+  "description": "Harry Lim is a full-stack web developer with 10+ years of experience.",
   "keywords": [
     "react",
     "next",
@@ -26,23 +25,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sanidhyy/modern-portfolio.git"
+    "url": "https://github.com/runehand/modern-portfolio.git"
   },
-  "homepage": "https://github.com/sanidhyy/modern-portfolio#readme",
+  "homepage": "https://github.com/runehand/modern-portfolio#readme",
   "bugs": {
-    "url": "https://github.com/sanidhyy/modern-portfolio/issues",
-    "email": "sanidhya.verma12345@gmail.com"
+    "url": "https://github.com/runehand/modern-portfolio/issues"
   },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
-  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -68,5 +56,6 @@
     "eslint-config-next": "13.4.3",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2"
-  }
+  },
+  "packageManager": "yarn@4.3.1+sha512.af78262d7d125afbfeed740602ace8c5e4405cd7f4735c08feb327286b2fdb2390fbca01589bfd1f50b1240548b74806767f5a063c94b67e431aabd0d86f7774"
 }

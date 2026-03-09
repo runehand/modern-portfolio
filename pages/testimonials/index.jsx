@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import TestimonialSlider from "../../components/TestimonialSlider";
 import { fadeIn } from "../../variants";
 
+export const getStaticProps = async () => ({
+  notFound: true,
+});
+
 const Testimonials = () => {
   return (
     <div className="h-full bg-primary/30 py-32 text-center">
