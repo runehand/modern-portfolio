@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { BsArrowLeft, BsArrowRight, BsArrowUpRight } from "react-icons/bs";
 import { Navigation } from "swiper/modules";
@@ -13,6 +12,7 @@ import {
   getProjectBySlug,
   projects,
 } from "../../data/projects";
+import usePortfolioPageScroll from "../../hooks/usePortfolioPageScroll";
 import { fadeIn } from "../../variants";
 
 import "swiper/css";
@@ -43,30 +43,7 @@ export const getStaticProps = async ({ params }) => {
 const ProjectDetail = ({ project }) => {
   const prevButtonClass = `project-slider-prev-${project.slug}`;
   const nextButtonClass = `project-slider-next-${project.slug}`;
-
-  useEffect(() => {
-    const resetHeaderScroll = () => {
-      window.dispatchEvent(
-        new CustomEvent("portfolio:page-scroll", {
-          detail: { scrollTop: 0 },
-        })
-      );
-    };
-
-    resetHeaderScroll();
-
-    return () => {
-      resetHeaderScroll();
-    };
-  }, []);
-
-  const handlePageScroll = (event) => {
-    window.dispatchEvent(
-      new CustomEvent("portfolio:page-scroll", {
-        detail: { scrollTop: event.currentTarget.scrollTop },
-      })
-    );
-  };
+  const handlePageScroll = usePortfolioPageScroll();
 
   return (
     <>
@@ -117,13 +94,21 @@ const ProjectDetail = ({ project }) => {
 
               <p className="mb-8 max-w-xl">{project.intro}</p>
 
-              <div className="mb-8 max-w-sm">
+              <div className="mb-8 grid max-w-xl gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
                   <div className="mb-1 text-[11px] uppercase tracking-[0.25em] text-white/40">
                     Role
                   </div>
                   <div className="text-sm font-semibold text-white">
                     {project.role}
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+                  <div className="mb-1 text-[11px] uppercase tracking-[0.25em] text-white/40">
+                    Created
+                  </div>
+                  <div className="text-sm font-semibold text-white">
+                    {project.created}
                   </div>
                 </div>
               </div>
@@ -147,7 +132,7 @@ const ProjectDetail = ({ project }) => {
                   </Link>
                 ) : (
                   <div className="inline-flex items-center rounded-full border border-dashed border-white/15 px-5 py-3 text-sm text-white/50">
-                    Live link coming soon
+                    Private project
                   </div>
                 )}
               </div>

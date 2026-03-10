@@ -4,6 +4,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import TopLeftImg from "../components/TopLeftImg";
+import { siteMeta } from "../data/profile";
 
 // setup font
 const sora = Sora({
@@ -19,15 +20,9 @@ const Layout = ({ children }) => {
     >
       {/* metadata */}
       <Head>
-        <title>Harry Lim | Portfolio</title>
-        <meta
-          name="description"
-          content="Harry Lim is a full-stack web developer with 10+ years of experience."
-        />
-        <meta
-          name="keywords"
-          content="react, next, nextjs, html, css, javascript, js, modern-ui, modern-ux, portfolio, framer-motion, 3d-website, particle-effect"
-        />
+        <title>{siteMeta.title}</title>
+        <meta name="description" content={siteMeta.description} />
+        <meta name="keywords" content={siteMeta.keywords} />
         <meta name="author" content="Harry Lim" />
         <meta name="theme-color" content="#f13024" />
       </Head>

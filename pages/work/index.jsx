@@ -29,8 +29,9 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Open any project card to view a dedicated case study with
-              screenshots, stack details, and the feature breakdown.
+              Selected product work across booking, mobile, fintech, AI, and
+              Web3 platforms, migrated from the previous portfolio into this
+              updated case-study format.
             </motion.p>
           </div>
 

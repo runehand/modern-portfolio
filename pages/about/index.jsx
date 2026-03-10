@@ -1,232 +1,267 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 import CountUp from "react-countup";
-import {
-  FaCss3,
-  FaFigma,
-  FaHtml5,
-  FaJs,
-  FaReact,
-  FaWordpress,
-} from "react-icons/fa";
-import {
-  SiAdobephotoshop,
-  SiAdobexd,
-  SiFramer,
-  SiNextdotjs,
-} from "react-icons/si";
 
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
+import {
+  aboutFocusAreas,
+  aboutStats,
+  aboutSummary,
+  aboutTabs,
+  profileLinks,
+} from "../../data/profile";
+import usePortfolioPageScroll from "../../hooks/usePortfolioPageScroll";
 import { fadeIn } from "../../variants";
-
-//  data
-export const aboutData = [
-  {
-    title: "skills",
-    info: [
-      {
-        title: "Web Development",
-        icons: [
-          FaHtml5,
-          FaCss3,
-          FaJs,
-          FaReact,
-          SiNextdotjs,
-          SiFramer,
-          FaWordpress,
-        ],
-      },
-      {
-        title: "UI/UX Design",
-        icons: [FaFigma, SiAdobexd, SiAdobephotoshop],
-      },
-    ],
-  },
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
-    ],
-  },
-  {
-    title: "experience",
-    info: [
-      {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
-      },
-      {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
-      },
-    ],
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
-      },
-    ],
-  },
-];
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  const handlePageScroll = usePortfolioPageScroll();
+  const activeTab = aboutTabs[index];
+  const isExperienceTab = activeTab.title === "experience";
+  const isSkillsTab = activeTab.title === "skills";
 
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div
+      className="relative h-full overflow-x-hidden overflow-y-auto bg-primary/30 py-28 text-center xl:py-32 xl:text-left"
+      onScroll={handlePageScroll}
+    >
       <Circles />
 
-      {/* avatar img */}
       <motion.div
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
+        className="pointer-events-none absolute bottom-0 -left-[260px] hidden opacity-30 xl:flex"
       >
         <Avatar />
       </motion.div>
 
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        {/* text */}
-        <div className="flex-1 flex flex-col justify-center">
+      <div className="container relative z-20 mx-auto flex min-h-full flex-col gap-8 xl:flex-row xl:items-start xl:gap-x-12">
+        <div className="flex flex-1 flex-col xl:sticky xl:top-24 xl:max-w-[55%] xl:self-start">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2"
+            className="h2 mb-4 max-w-[460px]"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Building products that feel <span className="text-accent">fast</span>,
+            useful, and scalable.
           </motion.h2>
+
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="mx-auto mb-6 max-w-[520px] px-2 xl:mx-0 xl:px-0"
           >
-            10 years ago, I begin freelancing as a developer. Since then, I&apos;ve
-            done remote work for agencies, consulted for startups, and
-            collabrated on digital products for business and consumer use.
+            {aboutSummary}
           </motion.p>
 
-          {/* counters */}
           <motion.div
             variants={fadeIn("right", 0.6)}
             initial="hidden"
             animate="show"
-            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+            className="mb-6 flex flex-wrap justify-center gap-2 xl:justify-start"
           >
-            <div className="flex flex-1 xl:gap-x-6">
-              {/* experience */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of experience.
-                </div>
+            {aboutFocusAreas.map((item) => (
+              <div
+                key={item}
+                className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-white/75 backdrop-blur-sm"
+              >
+                {item}
               </div>
+            ))}
+          </motion.div>
 
-              {/* clients */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} />
+          <motion.div
+            variants={fadeIn("right", 0.7)}
+            initial="hidden"
+            animate="show"
+            className="mb-6 grid gap-3 sm:grid-cols-3"
+          >
+            {aboutStats.map((item) => (
+              <div
+                key={item.label}
+                className="rounded-[20px] border border-white/10 bg-white/5 p-4 text-left backdrop-blur-sm"
+              >
+                <div className="mb-1 text-2xl font-extrabold text-accent xl:text-3xl">
+                  <CountUp start={0} end={item.value} duration={4} />
+                  {item.suffix}
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients.
+                <div className="text-[10px] uppercase tracking-[0.2em] leading-[1.5] text-white/60">
+                  {item.label}
                 </div>
               </div>
+            ))}
+          </motion.div>
 
-              {/* projects */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished projects.
-                </div>
-              </div>
-
-              {/* awards */}
-              <div className="relative flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={8} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning awards.
-                </div>
-              </div>
-            </div>
+          <motion.div
+            variants={fadeIn("right", 0.8)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="flex flex-wrap justify-center gap-4 xl:justify-start"
+          >
+            <Link
+              href={profileLinks.cv}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline-flex h-[52px] items-center rounded-full bg-accent px-7 text-sm font-medium text-white transition-transform duration-300 hover:scale-[1.02]"
+            >
+              Download CV
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex h-[52px] items-center rounded-full border border-white/20 px-7 text-sm font-medium text-white transition-colors duration-300 hover:border-accent hover:text-accent"
+            >
+              Contact me
+            </Link>
           </motion.div>
         </div>
 
-        {/* info */}
         <motion.div
           variants={fadeIn("left", 0.4)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+          className="flex w-full flex-col xl:max-w-[45%]"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
-            {aboutData.map((item, itemI) => (
-              <div
+          <div className="mx-auto mb-6 flex flex-wrap justify-center gap-4 xl:mx-0 xl:justify-start">
+            {aboutTabs.map((item, itemI) => (
+              <button
+                type="button"
                 key={itemI}
-                className={`${
-                  index === itemI &&
-                  "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                aria-pressed={index === itemI}
+                className={`${index === itemI
+                  ? "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+                  : ""
+                } relative text-sm capitalize after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-8 after:bg-white xl:text-lg`}
                 onClick={() => setIndex(itemI)}
               >
                 {item.title}
-              </div>
+              </button>
             ))}
           </div>
 
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
-            {aboutData[index].info.map((item, itemI) => (
+          <div
+            className={`py-2 xl:py-4 ${
+              isExperienceTab
+                ? "flex flex-col gap-4"
+                : isSkillsTab
+                  ? "flex flex-col gap-4"
+                  : "grid gap-4"
+            }`}
+          >
+            {activeTab.info.map((item, itemI) => (
               <div
                 key={itemI}
-                className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-center text-white/60"
+                className="rounded-[24px] border border-white/10 bg-white/5 text-left backdrop-blur-sm"
               >
-                {/* title */}
-                <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                <div className="hidden md:flex">-</div>
-                <div>{item.stage}</div>
+                {isExperienceTab ? (
+                  <div className="grid gap-6 p-5 xl:grid-cols-[200px_1fr] xl:gap-8 xl:p-6">
+                    <div className="space-y-3 rounded-[18px] border border-white/10 bg-black/20 p-4 xl:border-0 xl:bg-transparent xl:p-0">
+                      {item.stage && (
+                        <div className="text-[11px] uppercase tracking-[0.3em] text-accent">
+                          {item.stage}
+                        </div>
+                      )}
 
-                <div className="flex gap-x-4">
-                  {/* icons */}
-                  {item.icons?.map((Icon, iconI) => (
-                    <div key={iconI} className="text-2xl text-white">
-                      <Icon />
+                      <div className="text-lg font-semibold text-white">
+                        {item.title}
+                      </div>
+
+                      {item.company && (
+                        <div className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+                          {item.company}
+                        </div>
+                      )}
                     </div>
-                  ))}
-                </div>
+
+                    <div className="flex-1">
+                      {item.tags?.length ? (
+                        <div className="flex flex-wrap gap-2">
+                          {item.tags.map((tag) => (
+                            <div
+                              key={tag}
+                              className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-xs text-white/80"
+                            >
+                              {tag}
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
+
+                      {item.details?.length ? (
+                        <div className="mt-4 grid gap-2">
+                          {item.details.map((detail) => (
+                            <div
+                              key={detail}
+                              className="flex gap-x-3 text-sm text-white/70"
+                            >
+                              <div
+                                className="mt-2 h-2 w-2 rounded-full bg-accent"
+                                aria-hidden
+                              />
+                              <div>{detail}</div>
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="p-5">
+                    {(item.eyebrow || item.stage) && (
+                      <div className="text-[11px] uppercase tracking-[0.3em] text-accent">
+                        {item.eyebrow || item.stage}
+                      </div>
+                    )}
+
+                    <div className="mt-2 text-lg font-semibold text-white">
+                      {item.title}
+                    </div>
+
+                    {item.company && (
+                      <div className="mt-1 text-sm text-white/60">
+                        {item.company}
+                      </div>
+                    )}
+
+                    {item.tags?.length ? (
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {item.tags.map((tag) => (
+                          <div
+                            key={tag}
+                            className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-xs text-white/80"
+                          >
+                            {tag}
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
+
+                    {item.details?.length ? (
+                      <div className="mt-4 grid gap-2">
+                        {item.details.map((detail) => (
+                          <div
+                            key={detail}
+                            className="flex gap-x-3 text-sm text-white/70"
+                          >
+                            <div
+                              className="mt-2 h-2 w-2 rounded-full bg-accent"
+                              aria-hidden
+                            />
+                            <div>{detail}</div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                )}
               </div>
             ))}
           </div>

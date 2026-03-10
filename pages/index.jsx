@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import ParticlesContainer from "../components/ParticlesContainer";
 import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
+import { heroData } from "../data/profile";
 
 import { fadeIn } from "../variants";
 
@@ -20,8 +22,8 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            {heroData.name} <br />
+            <span className="text-accent">{heroData.title}</span>
           </motion.h1>
 
           {/* subtitle */}
@@ -32,11 +34,32 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
-            exercitationem harum, quia nulla temporibus deleniti libero veniam
-            vero beatae numquam ducimus illum ab similique ipsam tempore fugit
-            quod laudantium debitis.
+            <span className="mb-3 block text-xs uppercase tracking-[0.35em] text-accent">
+              {heroData.greeting}
+            </span>
+            {heroData.description}
           </motion.p>
+
+          <motion.div
+            variants={fadeIn("down", 0.35)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="mb-10 flex flex-wrap items-center justify-center gap-4 xl:justify-start xl:mb-14"
+          >
+            <Link
+              href="/work"
+              className="inline-flex h-[52px] items-center rounded-full bg-accent px-7 text-sm font-medium text-white transition-transform duration-300 hover:scale-[1.02]"
+            >
+              View selected work
+            </Link>
+            <Link
+              href="/about"
+              className="inline-flex h-[52px] items-center rounded-full border border-white/20 px-7 text-sm font-medium text-white transition-colors duration-300 hover:border-accent hover:text-accent"
+            >
+              More about me
+            </Link>
+          </motion.div>
 
           {/* btn */}
           <div className="flex justify-center xl:hidden relative">

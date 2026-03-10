@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import Socials from "../components/Socials";
+import { heroData } from "../data/profile";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,17 +45,17 @@ const Header = () => {
           <Link
             href="/"
             className="group inline-flex flex-col leading-none"
-            aria-label="runehand home"
+            aria-label="Harry Lim home"
           >
-            <span className="text-[20px] font-semibold lowercase tracking-[0.45em] text-white transition-colors duration-300 sm:text-[24px] xl:text-[26px] group-hover:text-accent">
-              runehand
+            <span className="text-[20px] font-semibold tracking-[0.25em] text-white transition-colors duration-300 sm:text-[24px] xl:text-[26px] group-hover:text-accent">
+              HARRY LIM
             </span>
             <span className="mt-2 inline-flex items-center gap-x-3 text-[10px] uppercase tracking-[0.45em] text-white/40">
               <span
                 className="h-px w-8 bg-accent transition-all duration-300 group-hover:w-14"
                 aria-hidden
               />
-              portfolio
+              {heroData.title}
             </span>
           </Link>
 
