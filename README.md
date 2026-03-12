@@ -59,15 +59,18 @@ modern-portfolio/
     |-- ProjectsBtn.jsx
     |-- ServiceSlider.jsx
     |-- Socials.jsx
-    |-- TestimonialSlider.jsx
     |-- TopLeftImg.jsx
     |-- Transition.jsx
     |-- WorkSlider.jsx
+  |- data/
+    |-- profile.js
+    |-- projects.js
+  |- hooks/
+    |-- usePortfolioPageScroll.js
   |- pages/
     |-- about/
     |-- contact/
     |-- services/
-    |-- testimonials/
     |-- work/
     |-- _app.jsx
     |-- index.jsx
@@ -76,6 +79,8 @@ modern-portfolio/
     |-- globals.css
   |- .eslintrc.json
   |- .gitignore
+  |- .pnp.cjs
+  |- .pnp.loader.mjs
   |- netlify.toml
   |- next.config.js
   |- package-lock.json
@@ -83,6 +88,7 @@ modern-portfolio/
   |- postcss.config.js
   |- tailwind.config.js
   |- variants.js
+  |- yarn.lock
 ```
 <!--- FOLDER_STRUCTURE_END --->
 
