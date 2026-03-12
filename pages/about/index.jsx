@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import CountUp from "react-countup";
+import * as SiIcons from "react-icons/si";
 
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
@@ -14,6 +15,96 @@ import {
 } from "../../data/profile";
 import usePortfolioPageScroll from "../../hooks/usePortfolioPageScroll";
 import { fadeIn } from "../../variants";
+
+const containsAny = (value, keywords) => {
+  const normalized = value.toLowerCase();
+  return keywords.some((keyword) => normalized.includes(keyword));
+};
+
+const skillIconRules = [
+  { keywords: ["react native", "react.js", "react"], icon: "SiReact" },
+  { keywords: ["next.js", "nextjs"], icon: "SiNextdotjs" },
+  { keywords: ["vue.js", "vue"], icon: "SiVuedotjs" },
+  { keywords: ["angular"], icon: "SiAngular" },
+  { keywords: ["typescript"], icon: "SiTypescript" },
+  { keywords: ["javascript"], icon: "SiJavascript" },
+  { keywords: ["redux"], icon: "SiRedux" },
+  { keywords: ["zustand"], icon: "SiZustand" },
+  { keywords: ["tailwind"], icon: "SiTailwindcss" },
+  {
+    keywords: ["styled components", "styled-components"],
+    icon: "SiStyledcomponents",
+  },
+  { keywords: ["mui", "material ui", "material-ui"], icon: "SiMaterialui" },
+  { keywords: ["shadcn"], icon: "SiShadcnui" },
+  { keywords: ["framer"], icon: "SiFramer" },
+  { keywords: ["three.js", "r3f", "three"], icon: "SiThreedotjs" },
+  { keywords: ["storybook"], icon: "SiStorybook" },
+  { keywords: ["vite"], icon: "SiVite" },
+  { keywords: ["webpack"], icon: "SiWebpack" },
+  { keywords: ["node.js", "nodejs", "node"], icon: "SiNodedotjs" },
+  { keywords: ["express"], icon: "SiExpress" },
+  { keywords: ["nest.js", "nestjs"], icon: "SiNestjs" },
+  { keywords: ["laravel"], icon: "SiLaravel" },
+  { keywords: ["python"], icon: "SiPython" },
+  { keywords: ["django"], icon: "SiDjango" },
+  { keywords: ["flask"], icon: "SiFlask" },
+  { keywords: ["fastapi", "fast api"], icon: "SiFastapi" },
+  { keywords: ["asp.net", "dotnet", ".net"], icon: "SiDotnet" },
+  { keywords: ["postgres"], icon: "SiPostgresql" },
+  { keywords: ["mysql"], icon: "SiMysql" },
+  { keywords: ["mongodb", "mongo"], icon: "SiMongodb" },
+  { keywords: ["redis"], icon: "SiRedis" },
+  { keywords: ["graphql"], icon: "SiGraphql" },
+  { keywords: ["prisma"], icon: "SiPrisma" },
+  { keywords: ["flutter"], icon: "SiFlutter" },
+  { keywords: ["expo"], icon: "SiExpo" },
+  { keywords: ["swift"], icon: "SiSwift" },
+  { keywords: ["kotlin"], icon: "SiKotlin" },
+  { keywords: ["firebase"], icon: "SiFirebase" },
+  { keywords: ["gcp", "google cloud"], icon: "SiGooglecloud" },
+  { keywords: ["xcode"], icon: "SiXcode" },
+  { keywords: ["android studio"], icon: "SiAndroidstudio" },
+  { keywords: ["solidity"], icon: "SiSolidity" },
+  { keywords: ["hardhat"], icon: "SiHardhat" },
+  { keywords: ["foundry"], icon: "SiFoundry" },
+  { keywords: ["openzeppelin"], icon: "SiOpenzeppelin" },
+  { keywords: ["walletconnect"], icon: "SiWalletconnect" },
+  { keywords: ["metamask"], icon: "SiMetamask" },
+  { keywords: ["arbitrum"], icon: "SiArbitrum" },
+  { keywords: ["optimism"], icon: "SiOptimism" },
+  { keywords: ["ethers"], icon: "SiEthers" },
+  { keywords: ["ethereum", "evm", "erc"], icon: "SiEthereum" },
+  { keywords: ["aws", "amazon web services"], icon: "SiAmazonaws" },
+  { keywords: ["terraform"], icon: "SiTerraform" },
+  { keywords: ["kubernetes", "k8s"], icon: "SiKubernetes" },
+  { keywords: ["helm"], icon: "SiHelm" },
+  { keywords: ["docker"], icon: "SiDocker" },
+  { keywords: ["nginx"], icon: "SiNginx" },
+  { keywords: ["cloudflare"], icon: "SiCloudflare" },
+  { keywords: ["github actions"], icon: "SiGithubactions" },
+  { keywords: ["vercel"], icon: "SiVercel" },
+  { keywords: ["netlify"], icon: "SiNetlify" },
+  { keywords: ["prometheus"], icon: "SiPrometheus" },
+  { keywords: ["grafana"], icon: "SiGrafana" },
+  { keywords: ["airflow"], icon: "SiApacheairflow" },
+  { keywords: ["n8n"], icon: "SiN8n" },
+  { keywords: ["zapier"], icon: "SiZapier" },
+  { keywords: ["openai"], icon: "SiOpenai" },
+  { keywords: ["azure"], icon: "SiMicrosoftazure" },
+  { keywords: ["mlflow"], icon: "SiMlflow" },
+  { keywords: ["pinecone"], icon: "SiPinecone" },
+  { keywords: ["weaviate"], icon: "SiWeaviate" },
+];
+
+const getSkillIcon = (tag) => {
+  for (const rule of skillIconRules) {
+    if (!containsAny(tag, rule.keywords)) continue;
+    const Icon = SiIcons[rule.icon];
+    if (Icon) return Icon;
+  }
+  return null;
+};
 
 const About = () => {
   const [index, setIndex] = useState(0);
@@ -48,8 +139,7 @@ const About = () => {
             exit="hidden"
             className="h2 mb-4 max-w-[460px]"
           >
-            Building products that feel <span className="text-accent">fast</span>,
-            useful, and scalable.
+            Simple. <span className="text-accent">Fast.</span> Reliable.
           </motion.h2>
 
           <motion.p
@@ -228,14 +318,26 @@ const About = () => {
 
                     {item.tags?.length ? (
                       <div className="mt-4 flex flex-wrap gap-2">
-                        {item.tags.map((tag) => (
-                          <div
-                            key={tag}
-                            className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-xs text-white/80"
-                          >
-                            {tag}
-                          </div>
-                        ))}
+                        {item.tags.map((tag) => {
+                          const Icon = isSkillsTab ? getSkillIcon(tag) : null;
+                          const hasIcon = Boolean(Icon);
+
+                          return (
+                            <div
+                              key={tag}
+                              className={`inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/20 py-2 text-xs text-white/80 ${hasIcon ? "pl-2.5 pr-3" : "px-3"
+                                }`}
+                            >
+                              {Icon ? (
+                                <Icon
+                                  className="h-3.5 w-3.5 flex-shrink-0 text-white/80"
+                                  aria-hidden
+                                />
+                              ) : null}
+                              <span className="leading-none">{tag}</span>
+                            </div>
+                          );
+                        })}
                       </div>
                     ) : null}
 

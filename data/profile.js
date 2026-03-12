@@ -384,14 +384,14 @@ export const socialLinks = [
     href: "https://github.com/runehand",
   },
   {
+    key: "stackoverflow",
+    label: "Stack Overflow",
+    href: "https://stackoverflow.com/users/7619230/harry",
+  },
+  {
     key: "email",
     label: "Email",
     href: "mailto:harrylim0831@gmail.com",
-  },
-  {
-    key: "telegram",
-    label: "Telegram",
-    href: "https://t.me/runehand",
   },
 ];
 

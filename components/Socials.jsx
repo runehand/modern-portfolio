@@ -5,12 +5,35 @@ import {
   RiMailLine,
   RiTelegramLine,
 } from "react-icons/ri";
+import * as SiIcons from "react-icons/si";
 import { socialLinks } from "../data/profile";
+
+const StackOverflowFallback = (props) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.6"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="1em"
+    height="1em"
+    {...props}
+  >
+    <path d="M6 7h12" />
+    <path d="M7 11h10" />
+    <path d="M8 15h8" />
+    <path d="M5 19h14v-4" />
+  </svg>
+);
+
+const StackOverflowIcon = SiIcons.SiStackoverflow || StackOverflowFallback;
 
 const iconMap = {
   github: RiGithubLine,
   email: RiMailLine,
   telegram: RiTelegramLine,
+  stackoverflow: StackOverflowIcon,
 };
 
 const Socials = () => {

@@ -24,6 +24,46 @@
   transform: scale(0.96);
 }
 
+/* Theme scrollbar */
+:root {
+  --scrollbar-track: rgba(255, 255, 255, 0.06);
+  --scrollbar-thumb: rgba(241, 48, 36, 0.55);
+  --scrollbar-thumb-hover: rgba(241, 48, 36, 0.85);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(241, 48, 36, 0.35),
+    rgba(241, 48, 36, 0.75)
+  );
+  border-radius: 999px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(241, 48, 36, 0.6),
+    var(--scrollbar-thumb-hover)
+  );
+}
+
 @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
