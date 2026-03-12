@@ -118,14 +118,14 @@ const About = () => {
       className="relative h-full overflow-x-hidden overflow-y-auto bg-primary/30 py-28 text-center xl:py-32 xl:text-left"
       onScroll={handlePageScroll}
     >
-      <Circles />
+      <Circles fixed />
 
       <motion.div
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="pointer-events-none absolute bottom-0 -left-[260px] hidden opacity-30 xl:flex"
+        className="pointer-events-none fixed bottom-0 -left-[260px] hidden opacity-30 xl:flex"
       >
         <Avatar />
       </motion.div>
