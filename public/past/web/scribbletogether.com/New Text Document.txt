@@ -1,9 +1,0 @@
-Scribble Together
-A real-time whiteboard collaboration tool designed for online tutoring and remote teams. It allows users to draw, annotate, and share ideas visually in a shared space with live sync features.
-
-Role: Full Stack Developer
-
-Features & Challenges:
-I built real-time collaboration features using WebSockets and optimized the drawing performance for low-latency interactions. On the backend, I designed APIs for session handling, authentication, and persistent storage. A core challenge was ensuring data consistency and live sync accuracy across multiple clients. I also implemented access control and session security features.
-
-Tech Stack: React, Node.js, Express, WebSockets, MongoDB, Redis, AWS

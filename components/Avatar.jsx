@@ -4,7 +4,7 @@ const Avatar = () => {
   return (
     <div className="hidden xl:flex xl:max-w-none pointer-events-none select-none">
       <Image
-        src="/profile/about-me-no-background.png"
+        src="/profile/no-background-profile.png"
         alt="Harry Lim portrait"
         width={408}
         height={533}

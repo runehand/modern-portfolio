@@ -1,10 +1,9 @@
 export const projects = [
-{
+  {
     slug: "avior-airlines",
     title: "Avior Airlines",
     category: "Airline Booking",
-    thumbnail:
-      "/past/web/aviorair.com/Avior airlines _ Vuelos nacionales e internacional.png",
+    thumbnail: "/projects/web/avior-airlines/cover.png",
     created: "2025",
     role: "Full Stack Developer",
     liveUrl: null,
@@ -28,17 +27,17 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/web/aviorair.com/Avior airlines _ Vuelos nacionales e internacional.png",
+        src: "/projects/web/avior-airlines/cover.png",
         alt: "Avior Airlines booking platform",
         caption: "Flight search and booking flow for airline travelers",
       },
     ],
   },
-{
+  {
     slug: "butt-workout",
     title: "Butt Workout",
     category: "Fitness App",
-    thumbnail: "/past/mobile/Butt Workout/template.png",
+    thumbnail: "/projects/mobile/butt-workout/cover.png",
     created: "2024",
     role: "React Native / iOS Developer",
     liveUrl:
@@ -63,17 +62,17 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/mobile/Butt Workout/template.png",
+        src: "/projects/mobile/butt-workout/cover.png",
         alt: "Butt Workout fitness app",
         caption: "Workout guidance and progress tracking",
       },
     ],
   },
-{
+  {
     slug: "caveworld",
     title: "CaveWorld",
     category: "Web3 Game",
-    thumbnail: "/past/web/caveworld.com/c.png",
+    thumbnail: "/projects/web/caveworld/cover.png",
     created: "2025",
     role: "Front-End Developer",
     liveUrl: "https://www.caveworld.com/",
@@ -89,17 +88,17 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/web/caveworld.com/c.png",
+        src: "/projects/web/caveworld/cover.png",
         alt: "CaveWorld WebGL experience",
         caption: "Immersive 3D landing experience for a fantasy game",
       },
     ],
   },
-{
+  {
     slug: "dog-translator",
     title: "Dog Translator",
     category: "Pet App",
-    thumbnail: "/past/mobile/dog-translator/template.png",
+    thumbnail: "/projects/mobile/dog-translator/cover.png",
     created: "2024",
     role: "React Native / iOS Developer",
     liveUrl:
@@ -124,18 +123,17 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/mobile/dog-translator/template.png",
+        src: "/projects/mobile/dog-translator/cover.png",
         alt: "Dog Translator app",
         caption: "Voice translation and AI insights experience",
       },
     ],
   },
-{
+  {
     slug: "ceras-health",
     title: "Ceras Health",
     category: "Digital Health",
-    thumbnail:
-      "/past/web/cerashealth.com/Unlock The Future of Digital Connected Care - Cera.png",
+    thumbnail: "/projects/web/ceras-health/cover.png",
     created: "2025",
     role: "Full Stack Developer",
     liveUrl: null,
@@ -159,17 +157,22 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/web/cerashealth.com/Unlock The Future of Digital Connected Care - Cera.png",
+        src: "/projects/web/ceras-health/cover.png",
         alt: "Ceras Health dashboard experience",
         caption: "Connected care dashboards for patients and clinicians",
       },
+      {
+        src: "/projects/web/ceras-health/screen-02.png",
+        alt: "Ceras Health monitoring view",
+        caption: "Remote monitoring and care coordination view",
+      },
     ],
   },
-{
+  {
     slug: "fly-delta",
     title: "Fly Delta",
     category: "Travel App",
-    thumbnail: "/past/mobile/Fly/template.png",
+    thumbnail: "/projects/mobile/fly-delta/cover.png",
     created: "2024",
     role: "Swift / iOS Developer",
     liveUrl: "https://apps.apple.com/us/app/fly-delta/id388491656",
@@ -196,17 +199,17 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/mobile/Fly/template.png",
+        src: "/projects/mobile/fly-delta/cover.png",
         alt: "Fly Delta travel app",
         caption: "Booking and live travel updates on iOS",
       },
     ],
   },
-{
+  {
     slug: "mas-switzerland",
     title: "MAS Switzerland",
     category: "Luxury Commerce",
-    thumbnail: "/past/web/ch.maswitzerland.com/mac-maswitzerland.png",
+    thumbnail: "/projects/web/mas-switzerland/cover.png",
     created: "2025",
     role: "Backend Developer (Django)",
     liveUrl: null,
@@ -230,17 +233,27 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/web/ch.maswitzerland.com/mac-maswitzerland.png",
+        src: "/projects/web/mas-switzerland/cover.png",
         alt: "MAS Switzerland commerce experience",
         caption: "Luxury catalog and checkout experience",
       },
+      {
+        src: "/projects/web/mas-switzerland/screen-02.png",
+        alt: "MAS Switzerland product showcase",
+        caption: "Product storytelling and brand presentation",
+      },
+      {
+        src: "/projects/web/mas-switzerland/screen-03.png",
+        alt: "MAS Switzerland browsing experience",
+        caption: "Catalog browsing and product detail flow",
+      },
     ],
   },
-{
+  {
     slug: "joom",
     title: "Joom",
     category: "Mobile Commerce",
-    thumbnail: "/past/mobile/Joom/template.png",
+    thumbnail: "/projects/mobile/joom/cover.png",
     created: "2024",
     role: "React Native / iOS Developer",
     liveUrl: "https://apps.apple.com/us/app/joom-shopping-for-every-day/id1117424833",
@@ -265,17 +278,17 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/mobile/Joom/template.png",
+        src: "/projects/mobile/joom/cover.png",
         alt: "Joom mobile commerce app",
         caption: "Marketplace browsing and deal discovery",
       },
     ],
   },
-{
+  {
     slug: "salestream-crm",
     title: "Salestream CRM",
     category: "CRM Platform",
-    thumbnail: "/past/web/crm/mac-crm.png",
+    thumbnail: "/projects/web/salestream-crm/cover.png",
     created: "2025",
     role: "Full Stack Developer",
     liveUrl: "https://salestreamcrm.com/",
@@ -302,27 +315,52 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/web/crm/mac-crm.png",
+        src: "/projects/web/salestream-crm/cover.png",
         alt: "Salestream CRM dashboard",
         caption: "Admin dashboard and CRM overview",
       },
       {
-        src: "/past/web/crm/mac-crm-kanban.png",
+        src: "/projects/web/salestream-crm/screen-02.png",
         alt: "Salestream CRM kanban view",
         caption: "Pipeline and task management board",
       },
       {
-        src: "/past/web/crm/mac-crm-resource.png",
+        src: "/projects/web/salestream-crm/screen-03.png",
         alt: "Salestream CRM resource view",
         caption: "Resource management and tracking",
       },
+      {
+        src: "/projects/web/salestream-crm/screen-04.png",
+        alt: "Salestream CRM contact management",
+        caption: "Client contact and account details",
+      },
+      {
+        src: "/projects/web/salestream-crm/screen-05.png",
+        alt: "Salestream CRM listings",
+        caption: "Listings and catalog administration",
+      },
+      {
+        src: "/projects/web/salestream-crm/screen-06.png",
+        alt: "Salestream CRM messaging",
+        caption: "Real-time messaging and collaboration",
+      },
+      {
+        src: "/projects/web/salestream-crm/screen-07.png",
+        alt: "Salestream CRM resources",
+        caption: "Resource allocation and tracking views",
+      },
+      {
+        src: "/projects/web/salestream-crm/screen-08.png",
+        alt: "Salestream CRM task management",
+        caption: "Task and workflow management screens",
+      },
     ],
   },
-{
+  {
     slug: "joss-main",
     title: "Joss Main",
     category: "Home Commerce",
-    thumbnail: "/past/mobile/joss-main/template.png",
+    thumbnail: "/projects/mobile/joss-main/cover.png",
     created: "2024",
     role: "React Native / iOS Developer",
     liveUrl: "https://apps.apple.com/us/app/joss-main/id525522332",
@@ -346,17 +384,17 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/mobile/joss-main/template.png",
+        src: "/projects/mobile/joss-main/cover.png",
         alt: "Joss Main shopping app",
         caption: "Home decor discovery and AR previews",
       },
     ],
   },
-{
+  {
     slug: "hape",
     title: "HAPE",
     category: "NFT Fashion",
-    thumbnail: "/past/web/hape.io/HAPE PRIME - Google Chrome 2025-05-14 21.52.13.png",
+    thumbnail: "/projects/web/hape/cover.png",
     created: "2025",
     role: "Front-End Developer",
     liveUrl: null,
@@ -381,22 +419,22 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/web/hape.io/HAPE PRIME - Google Chrome 2025-05-14 21.52.13.png",
+        src: "/projects/web/hape/cover.png",
         alt: "HAPE NFT fashion experience",
         caption: "High-fidelity 3D fashion landing experience",
       },
       {
-        src: "/past/web/hape.io/HAPE _ Fashion Index - Google Chrome 2025-05-14 21.png",
+        src: "/projects/web/hape/screen-02.png",
         alt: "HAPE fashion index",
         caption: "Fashion index and avatar exploration",
       },
     ],
   },
-{
+  {
     slug: "one-medical",
     title: "One Medical",
     category: "Healthcare App",
-    thumbnail: "/past/mobile/one medical/template.png",
+    thumbnail: "/projects/mobile/one-medical/cover.png",
     created: "2024",
     role: "React Native / iOS Developer",
     liveUrl: "https://apps.apple.com/us/app/one-medical/id393507802",
@@ -421,17 +459,17 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/mobile/one medical/template.png",
+        src: "/projects/mobile/one-medical/cover.png",
         alt: "One Medical healthcare app",
         caption: "Virtual care and patient record access",
       },
     ],
   },
-{
+  {
     slug: "musa",
     title: "Musa",
     category: "Crypto Exchange",
-    thumbnail: "/past/web/musa/Screenshot_12.png",
+    thumbnail: "/projects/web/musa/cover.png",
     created: "2025",
     role: "Full Stack Developer",
     liveUrl: "https://bettercallraul.it",
@@ -456,27 +494,27 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/web/musa/Screenshot_12.png",
+        src: "/projects/web/musa/cover.png",
         alt: "Musa exchange interface",
         caption: "Exchange dashboard and coin selection",
       },
       {
-        src: "/past/web/musa/Screenshot_13.png",
+        src: "/projects/web/musa/screen-02.png",
         alt: "Musa transaction flow",
         caption: "Transaction status and confirmation flow",
       },
       {
-        src: "/past/web/musa/Screenshot_3.png",
+        src: "/projects/web/musa/screen-03.png",
         alt: "Musa wallet view",
         caption: "Wallet and balance management screens",
       },
     ],
   },
-{
+  {
     slug: "sayhi-chat",
     title: "SayHi Chat",
     category: "Social Discovery",
-    thumbnail: "/past/mobile/SayHi-chat/template.png",
+    thumbnail: "/projects/mobile/sayhi-chat/cover.png",
     created: "2024",
     role: "React Native / iOS Developer",
     liveUrl: "https://apps.apple.com/us/app/sayhi-chat-meet-new-people/id469609836",
@@ -500,17 +538,17 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/mobile/SayHi-chat/template.png",
+        src: "/projects/mobile/sayhi-chat/cover.png",
         alt: "SayHi Chat social app",
         caption: "Real-time chat and social discovery",
       },
     ],
   },
-{
+  {
     slug: "scribble-together",
     title: "Scribble Together",
     category: "Collaboration Tool",
-    thumbnail: "/past/web/scribbletogether.com/mac-scribbletogether.png",
+    thumbnail: "/projects/web/scribble-together/cover.png",
     created: "2025",
     role: "Full Stack Developer",
     liveUrl: null,
@@ -534,14 +572,19 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/past/web/scribbletogether.com/mac-scribbletogether.png",
+        src: "/projects/web/scribble-together/cover.png",
         alt: "Scribble Together whiteboard",
         caption: "Real-time whiteboard collaboration workspace",
       },
       {
-        src: "/past/web/scribbletogether.com/Scribble Together - Google Chrome 2025-05-14 04.28.png",
+        src: "/projects/web/scribble-together/screen-02.png",
         alt: "Scribble Together session view",
         caption: "Shared sessions and live drawing tools",
+      },
+      {
+        src: "/projects/web/scribble-together/screen-03.png",
+        alt: "Scribble Together workspace",
+        caption: "Live sketching and collaboration canvas",
       },
     ],
   },
@@ -549,7 +592,7 @@ export const projects = [
     slug: "alpinresorts",
     title: "ALPINRESORTS",
     category: "Travel Booking",
-    thumbnail: "/projects/alpinresorts.png",
+    thumbnail: "/projects/web/alpinresorts/cover.png",
     created: "4 Sep 2020",
     role: "Web Developer",
     liveUrl: "https://www.alpinresorts.com/",
@@ -565,7 +608,7 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/projects/alpinresorts.png",
+        src: "/projects/web/alpinresorts/cover.png",
         alt: "ALPINRESORTS booking platform",
         caption: "Booking interface and resort discovery flow",
       },
@@ -575,7 +618,7 @@ export const projects = [
     slug: "loko",
     title: "LOKO",
     category: "Food Delivery",
-    thumbnail: "/projects/loki-mobile.png",
+    thumbnail: "/projects/mobile/loko/cover.png",
     created: "4 Sep 2020",
     role: "Full Stack Developer",
     liveUrl: "https://loko.delivery/",
@@ -598,7 +641,7 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/projects/loki-mobile.png",
+        src: "/projects/mobile/loko/cover.png",
         alt: "LOKO food delivery platform",
         caption: "Real-time delivery product and mobile ordering flow",
       },
@@ -608,7 +651,7 @@ export const projects = [
     slug: "lift-with-liv",
     title: "Lift with Liv",
     category: "Fitness App",
-    thumbnail: "/projects/lift-with-liv.png",
+    thumbnail: "/projects/mobile/lift-with-liv/cover.png",
     created: "14 Aug 2020",
     role: "Mobile App Developer",
     liveUrl:
@@ -625,7 +668,7 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/projects/lift-with-liv.png",
+        src: "/projects/mobile/lift-with-liv/cover.png",
         alt: "Lift with Liv fitness app",
         caption: "Mobile fitness UX for training plans and progress tracking",
       },
@@ -635,7 +678,7 @@ export const projects = [
     slug: "cryptogpt",
     title: "CryptoGPT",
     category: "AI Trading Platform",
-    thumbnail: "/projects/cryptogpt.png",
+    thumbnail: "/projects/web/cryptogpt/cover.png",
     created: "15 Jan 2024",
     role: "Frontend, Backend, and DevOps Engineer",
     liveUrl: null,
@@ -659,7 +702,7 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/projects/cryptogpt.png",
+        src: "/projects/web/cryptogpt/cover.png",
         alt: "CryptoGPT AI trading platform",
         caption: "AI-assisted trading dashboard and strategy interface",
       },
@@ -669,7 +712,7 @@ export const projects = [
     slug: "starswap",
     title: "Starswap",
     category: "DeFi / DEX",
-    thumbnail: "/projects/starswap.png",
+    thumbnail: "/projects/web/starswap/cover.png",
     created: "4 June 2021",
     role: "Web3 and Smart Contract Developer",
     liveUrl: "https://starswap.net/",
@@ -685,7 +728,7 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/projects/starswap.png",
+        src: "/projects/web/starswap/cover.png",
         alt: "Starswap decentralized exchange",
         caption: "Token swap interface with wallet and transaction UX",
       },
@@ -695,7 +738,7 @@ export const projects = [
     slug: "car-leasing",
     title: "Car Leasing",
     category: "Mobile Commerce",
-    thumbnail: "/projects/car-leasing-ios.png",
+    thumbnail: "/projects/mobile/car-leasing/cover.png",
     created: "4 Apr 2021",
     role: "Mobile App Developer",
     liveUrl:
@@ -712,7 +755,7 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/projects/car-leasing-ios.png",
+        src: "/projects/mobile/car-leasing/cover.png",
         alt: "Car Leasing mobile app",
         caption: "Mobile leasing flow for configuration, quotes, and applications",
       },
@@ -722,7 +765,7 @@ export const projects = [
     slug: "kinghills",
     title: "KINGHILLS",
     category: "Travel Platform",
-    thumbnail: "/projects/kinghill.png",
+    thumbnail: "/projects/web/kinghills/cover.png",
     created: "4 Sep 2020",
     role: "Web and Mobile Developer",
     liveUrl: "https://www.kinghillstravels.com/",
@@ -738,7 +781,7 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/projects/kinghill.png",
+        src: "/projects/web/kinghills/cover.png",
         alt: "KINGHILLS travel platform",
         caption: "Travel booking product across web and mobile surfaces",
       },
@@ -748,7 +791,7 @@ export const projects = [
     slug: "nexus-fintrade",
     title: "Nexus FinTrade",
     category: "Trading App",
-    thumbnail: "/projects/nexus-mobile.png",
+    thumbnail: "/projects/mobile/nexus-fintrade/cover.png",
     created: "4 Feb 2022",
     role: "Mobile App Developer",
     liveUrl:
@@ -765,7 +808,7 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/projects/nexus-mobile.png",
+        src: "/projects/mobile/nexus-fintrade/cover.png",
         alt: "Nexus FinTrade mobile trading app",
         caption: "Trading app interface for live market workflows",
       },
@@ -775,7 +818,7 @@ export const projects = [
     slug: "misfitsnft",
     title: "Misfitsnft",
     category: "NFT Platform",
-    thumbnail: "/projects/misfitsnft.png",
+    thumbnail: "/projects/web/misfitsnft/cover.png",
     created: "4 Sep 2020",
     role: "Web, Web3, and Smart Contract Developer",
     liveUrl: "https://www.misfitsnft.co/",
@@ -791,7 +834,7 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/projects/misfitsnft.png",
+        src: "/projects/web/misfitsnft/cover.png",
         alt: "Misfitsnft platform",
         caption: "NFT minting flow and collection browsing interface",
       },
@@ -801,7 +844,7 @@ export const projects = [
     slug: "manufacturer",
     title: "Manufacturer",
     category: "Subscription Commerce",
-    thumbnail: "/projects/manufacturee-mobile.png",
+    thumbnail: "/projects/mobile/manufacturer/cover.png",
     created: "4 Sep 2020",
     role: "Frontend Developer",
     liveUrl:
@@ -824,7 +867,7 @@ export const projects = [
     ],
     screenshots: [
       {
-        src: "/projects/manufacturee-mobile.png",
+        src: "/projects/mobile/manufacturer/cover.png",
         alt: "Manufacturer subscription commerce app",
         caption: "Cross-platform subscription experience for meal plans",
       },

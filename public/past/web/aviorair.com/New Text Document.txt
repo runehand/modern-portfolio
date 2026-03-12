@@ -1,9 +1,0 @@
-Avior Airlines
-An airline booking and management platform for Venezuela-based Avior Airlines, offering flight search, booking, check-in, and passenger account management features.
-
-Role: Full Stack Developer
-
-Features & Challenges:
-I implemented the flight search and booking flow with dynamic fare calculations and seat selection. On the backend, I built APIs for reservation management and integrated with third-party airline systems. Handling multilingual support and region-specific validations was a key challenge. I also focused on ensuring the booking process was mobile-friendly and accessible.
-
-Tech Stack: Next.js, Node.js, Express, MySQL, Tailwind CSS, i18n, AWS

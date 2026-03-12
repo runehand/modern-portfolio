@@ -92,7 +92,7 @@ const Contact = () => {
             <div className="mb-6 flex items-center justify-center xl:justify-start">
               <div className="overflow-hidden rounded-[28px] border border-white/10 bg-black/20 p-2">
                 <Image
-                  src="/profile/profile-photo.jpg"
+                  src="/profile/profile-2.jpg"
                   alt="Harry Lim profile"
                   width={176}
                   height={176}
