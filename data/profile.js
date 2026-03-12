@@ -323,31 +323,31 @@ export const serviceItems = [
     key: "productDesign",
     title: "UX-Focused Frontend",
     description:
-      "Responsive interfaces built with strong hierarchy, interaction clarity, and production-ready component systems.",
+      "Polished UI systems with clear hierarchy, motion, and reusable components.",
   },
   {
     key: "frontend",
     title: "Full-Stack Web Apps",
     description:
-      "End-to-end delivery across React or Next.js frontends, backend APIs, real-time systems, and deployment workflows.",
+      "Full-stack delivery for fast, scalable web products from API to UI.",
   },
   {
     key: "fullStack",
     title: "Mobile Applications",
     description:
-      "Cross-platform product work for iOS and Android using React Native, Flutter, Firebase, and API-driven architectures.",
+      "Cross-platform iOS/Android builds with stable releases and smooth UX.",
   },
   {
     key: "mobile",
     title: "Blockchain Products",
     description:
-      "Wallet integrations, smart contracts, DEX flows, and user-facing Web3 experiences with better transaction UX.",
+      "Smart contracts, wallet flows, and secure Web3 UX with clean onboarding.",
   },
   {
     key: "web3",
     title: "AI Integrations",
     description:
-      "Product features powered by Python services, analytics pipelines, and real-time data workflows for modern apps.",
+      "LLM features, data pipelines, and automation-ready APIs for modern apps.",
   },
 ];
 

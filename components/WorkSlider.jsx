@@ -22,21 +22,21 @@ const WorkSlider = () => {
     >
       {workSlides.map((slide, i) => (
         <SwiperSlide key={i}>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4">
+          <div className="grid h-full grid-cols-2 grid-rows-2 gap-4">
             {slide.map((project) => (
               <Link
                 href={`/work/${project.slug}`}
-                className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+                className="group relative h-full w-full overflow-hidden rounded-lg"
                 key={project.slug}
               >
-                <div className="flex items-center justify-center relative overflow-hidden group">
+                <div className="relative h-full w-full overflow-hidden">
                   {/* image */}
                   <Image
                     src={project.thumbnail}
                     alt={project.title}
-                    width={500}
-                    height={300}
-                    className="transition-transform duration-500 group-hover:scale-110"
+                    fill
+                    sizes="(max-width: 640px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
 
                   {/* overlay gradient */}
