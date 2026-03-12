@@ -45,13 +45,13 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="mb-10 flex flex-wrap items-center justify-center gap-4 xl:justify-start xl:mb-14"
+            className="relative z-30 mb-10 flex flex-wrap items-center justify-center gap-4 xl:justify-start xl:mb-14"
           >
             <Link
               href="/work"
               className="inline-flex h-[52px] items-center rounded-full bg-accent px-7 text-sm font-medium text-white transition-transform duration-300 hover:scale-[1.02]"
             >
-              View selected work
+              View work
             </Link>
             <Link
               href="/about"

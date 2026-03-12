@@ -139,7 +139,7 @@ const About = () => {
                 className={`${index === itemI
                   ? "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
                   : ""
-                } relative text-sm capitalize after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-8 after:bg-white xl:text-lg`}
+                  } relative text-sm capitalize after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-8 after:bg-white xl:text-lg`}
                 onClick={() => setIndex(itemI)}
               >
                 {item.title}
@@ -148,13 +148,12 @@ const About = () => {
           </div>
 
           <div
-            className={`py-2 xl:py-4 ${
-              isExperienceTab
+            className={`py-2 xl:py-4 ${isExperienceTab
+              ? "flex flex-col gap-4"
+              : isSkillsTab
                 ? "flex flex-col gap-4"
-                : isSkillsTab
-                  ? "flex flex-col gap-4"
-                  : "grid gap-4"
-            }`}
+                : "grid gap-4"
+              }`}
           >
             {activeTab.info.map((item, itemI) => (
               <div
@@ -162,56 +161,52 @@ const About = () => {
                 className="rounded-[24px] border border-white/10 bg-white/5 text-left backdrop-blur-sm"
               >
                 {isExperienceTab ? (
-                  <div className="grid gap-6 p-5 xl:grid-cols-[200px_1fr] xl:gap-8 xl:p-6">
-                    <div className="space-y-3 rounded-[18px] border border-white/10 bg-black/20 p-4 xl:border-0 xl:bg-transparent xl:p-0">
-                      {item.stage && (
-                        <div className="text-[11px] uppercase tracking-[0.3em] text-accent">
-                          {item.stage}
-                        </div>
-                      )}
-
-                      <div className="text-lg font-semibold text-white">
-                        {item.title}
+                  <div className="flex flex-col gap-4 p-5 xl:p-6">
+                    {item.stage && (
+                      <div className="text-[11px] uppercase tracking-[0.3em] text-accent">
+                        {item.stage}
                       </div>
+                    )}
 
-                      {item.company && (
-                        <div className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
-                          {item.company}
-                        </div>
-                      )}
+                    <div className="text-lg font-semibold text-white xl:text-xl">
+                      {item.title}
                     </div>
 
-                    <div className="flex-1">
-                      {item.tags?.length ? (
-                        <div className="flex flex-wrap gap-2">
-                          {item.tags.map((tag) => (
-                            <div
-                              key={tag}
-                              className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-xs text-white/80"
-                            >
-                              {tag}
-                            </div>
-                          ))}
-                        </div>
-                      ) : null}
+                    {item.company && (
+                      <div className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+                        {item.company}
+                      </div>
+                    )}
 
-                      {item.details?.length ? (
-                        <div className="mt-4 grid gap-2">
-                          {item.details.map((detail) => (
+                    {item.tags?.length ? (
+                      <div className="flex flex-wrap gap-2">
+                        {item.tags.map((tag) => (
+                          <div
+                            key={tag}
+                            className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-xs text-white/80"
+                          >
+                            {tag}
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
+
+                    {item.details?.length ? (
+                      <div className="grid gap-2">
+                        {item.details.map((detail) => (
+                          <div
+                            key={detail}
+                            className="flex gap-x-3 text-sm text-white/70"
+                          >
                             <div
-                              key={detail}
-                              className="flex gap-x-3 text-sm text-white/70"
-                            >
-                              <div
-                                className="mt-2 h-2 w-2 rounded-full bg-accent"
-                                aria-hidden
-                              />
-                              <div>{detail}</div>
-                            </div>
-                          ))}
-                        </div>
-                      ) : null}
-                    </div>
+                              className="mt-1.5 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-accent ring-2 ring-accent/30"
+                              aria-hidden
+                            />
+                            <div>{detail}</div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
                 ) : (
                   <div className="p-5">
@@ -252,7 +247,7 @@ const About = () => {
                             className="flex gap-x-3 text-sm text-white/70"
                           >
                             <div
-                              className="mt-2 h-2 w-2 rounded-full bg-accent"
+                              className="mt-1.5 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-accent ring-2 ring-accent/30"
                               aria-hidden
                             />
                             <div>{detail}</div>

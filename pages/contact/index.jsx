@@ -23,6 +23,7 @@ const iconMap = {
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [copiedKey, setCopiedKey] = useState(null);
   const handlePageScroll = usePortfolioPageScroll();
 
   const handleSubmit = (event) => {
@@ -46,6 +47,28 @@ const Contact = () => {
       })
       .catch((error) => console.log(error))
       .finally(() => setIsLoading(false));
+  };
+
+  const handleCopy = async (value, key) => {
+    try {
+      if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(value);
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = value;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+      }
+      setCopiedKey(key);
+      window.setTimeout(() => setCopiedKey(null), 1500);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -97,8 +120,13 @@ const Contact = () => {
                     </div>
                     <div className="text-[11px] uppercase tracking-[0.3em] text-white/40">
                       {item.label}
+                      {copiedKey === item.key && (
+                        <span className="ml-2 rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.2em] text-accent">
+                          Copied
+                        </span>
+                      )}
                     </div>
-                    <div className="mt-2 text-sm font-medium text-white">
+                    <div className="mt-2 truncate text-sm font-medium text-white">
                       {item.value}
                     </div>
                   </>
@@ -111,7 +139,7 @@ const Contact = () => {
                       href={item.href}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="rounded-2xl border border-white/10 bg-black/10 p-5 transition-colors duration-300 hover:border-accent"
+                      className="min-w-0 rounded-2xl border border-white/10 bg-black/10 p-5 transition-colors duration-300 hover:border-accent"
                     >
                       {content}
                     </Link>
@@ -119,12 +147,15 @@ const Contact = () => {
                 }
 
                 return (
-                  <div
+                  <button
+                    type="button"
                     key={item.label}
-                    className="rounded-2xl border border-white/10 bg-black/10 p-5"
+                    className="min-w-0 rounded-2xl border border-white/10 bg-black/10 p-5 text-left transition-colors duration-300 hover:border-accent"
+                    onClick={() => handleCopy(item.value, item.key)}
+                    aria-label={`Copy ${item.label}`}
                   >
                     {content}
-                  </div>
+                  </button>
                 );
               })}
             </div>
@@ -206,11 +237,11 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="btn group flex max-w-[170px] items-center justify-center overflow-hidden rounded-full border border-white/50 px-8 transition-all duration-300 hover:border-accent"
+              className="btn group flex min-w-[170px] max-w-[200px] items-center justify-center overflow-hidden rounded-full border border-white/50 px-8 transition-all duration-300 hover:border-accent"
               disabled={isLoading}
               aria-disabled={isLoading}
             >
-              <span className="transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
+              <span className="whitespace-nowrap transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
                 Send message
               </span>
 
