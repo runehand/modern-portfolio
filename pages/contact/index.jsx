@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord, FaStackOverflow } from "react-icons/fa";
 import {
   RiGithubLine,
+  RiMapPinLine,
   RiMailLine,
   RiTelegramLine,
 } from "react-icons/ri";
@@ -19,12 +20,24 @@ const iconMap = {
   telegram: RiTelegramLine,
   discord: FaDiscord,
   github: RiGithubLine,
+  address: RiMapPinLine,
+  stackoverflow: FaStackOverflow,
 };
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [copiedKey, setCopiedKey] = useState(null);
   const handlePageScroll = usePortfolioPageScroll();
+  const orderedItems = [
+    "email",
+    "address",
+    "github",
+    "stackoverflow",
+    "telegram",
+    "discord",
+  ]
+    .map((key) => contactItems.find((item) => item.key === key))
+    .filter(Boolean);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -110,26 +123,28 @@ const Contact = () => {
               prefer sending a note directly from the site.
             </p>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              {contactItems.map((item) => {
+            <div className="grid gap-3 sm:grid-cols-2">
+              {orderedItems.map((item) => {
                 const Icon = iconMap[item.key];
                 const content = (
-                  <>
-                    <div className="mb-3 text-2xl text-accent">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-black/30 text-[20px] text-accent">
                       <Icon aria-hidden />
                     </div>
-                    <div className="text-[11px] uppercase tracking-[0.3em] text-white/40">
-                      {item.label}
-                      {copiedKey === item.key && (
-                        <span className="ml-2 rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.2em] text-accent">
-                          Copied
-                        </span>
-                      )}
+                    <div className="min-w-0">
+                      <div className="truncate text-[9px] uppercase tracking-[0.2em] text-white/45">
+                        {item.label}
+                        {copiedKey === item.key && (
+                          <span className="ml-2 rounded-full border border-accent/40 bg-accent/10 px-1.5 py-0.5 text-[9px] uppercase tracking-[0.2em] text-accent">
+                            Copied
+                          </span>
+                        )}
+                      </div>
+                      <div className="mt-1 truncate text-[13px] font-medium text-white/90">
+                        {item.value}
+                      </div>
                     </div>
-                    <div className="mt-2 truncate text-sm font-medium text-white">
-                      {item.value}
-                    </div>
-                  </>
+                  </div>
                 );
 
                 if (item.href) {
@@ -139,7 +154,7 @@ const Contact = () => {
                       href={item.href}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="min-w-0 rounded-2xl border border-white/10 bg-black/10 p-5 transition-colors duration-300 hover:border-accent"
+                      className="min-w-0 rounded-2xl border border-white/10 bg-black/10 px-4 py-3 transition-colors duration-300 hover:border-accent"
                     >
                       {content}
                     </Link>
@@ -150,7 +165,7 @@ const Contact = () => {
                   <button
                     type="button"
                     key={item.label}
-                    className="min-w-0 rounded-2xl border border-white/10 bg-black/10 p-5 text-left transition-colors duration-300 hover:border-accent"
+                    className="min-w-0 rounded-2xl border border-white/10 bg-black/10 px-4 py-3 text-left transition-colors duration-300 hover:border-accent"
                     onClick={() => handleCopy(item.value, item.key)}
                     aria-label={`Copy ${item.label}`}
                   >

@@ -359,6 +359,11 @@ export const contactItems = [
     href: "mailto:harrylim0831@gmail.com",
   },
   {
+    key: "address",
+    label: "Address",
+    value: "46 Circuit Road, Singapore 370046",
+  },
+  {
     key: "telegram",
     label: "Telegram",
     value: "runehand",
@@ -374,6 +379,12 @@ export const contactItems = [
     label: "GitHub",
     value: "github.com/runehand",
     href: "https://github.com/runehand",
+  },
+  {
+    key: "stackoverflow",
+    label: "Stack Overflow",
+    value: "stackoverflow.com/users/7619230/harry",
+    href: "https://stackoverflow.com/users/7619230/harry",
   },
 ];
 
