@@ -383,8 +383,8 @@ export const contactItems = [
   {
     key: "stackoverflow",
     label: "Stack Overflow",
-    value: "stackoverflow.com/users/7619230/harry",
-    href: "https://stackoverflow.com/users/7619230/harry",
+    value: "stackoverflow.com/users/6603342/harry",
+    href: "https://stackoverflow.com/users/6603342/harry",
   },
 ];
 
@@ -397,7 +397,7 @@ export const socialLinks = [
   {
     key: "stackoverflow",
     label: "Stack Overflow",
-    href: "https://stackoverflow.com/users/7619230/harry",
+    href: "https://stackoverflow.com/users/6603342/harry",
   },
   {
     key: "email",
