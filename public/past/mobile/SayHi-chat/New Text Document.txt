@@ -1,0 +1,10 @@
+https://apps.apple.com/us/app/sayhi-chat-meet-new-people/id469609836
+
+
+A social discovery app that connects users for real-time video chats, voice messages, and text conversations with nearby individuals. Features include profile browsing, message status indicators, and the ability to send virtual gifts.
+Role: React Native / iOS Developer
+Features & Challenges:
+
+Developed functionalities such as location-based matching, real-time messaging with read receipts, and integration of multimedia sharing (photos, videos, voice messages). Implemented virtual gifting system and customizable app themes. Challenges included ensuring user safety and privacy, optimizing performance for multimedia content, and managing real-time interactions across diverse network conditions.
+Tech Stack: 
+React Native, Redux, TypeScript, Firebase (Firestore, Auth), REST APIs, Push Notifications, In-App Purchases

@@ -1,0 +1,10 @@
+https://apps.apple.com/us/app/one-medical/id393507802
+
+
+A membership-based primary care app offering seamless access to in-office and virtual visits, prescription management, secure messaging, and health record syncing. Designed to provide comprehensive care for both body and mind.
+Role: React Native / iOS Developer
+Features & Challenges:
+
+Developed functionalities including appointment scheduling, prescription refills, secure messaging, and health record access. Integrated 24/7 virtual care services and Apple Health syncing. Challenges included ensuring HIPAA compliance, optimizing performance across devices, and managing real-time data synchronization.
+Tech Stack: 
+React Native, Redux, TypeScript, Firebase (Firestore, Auth), REST APIs, Apple HealthKit, In-App Payments, Push Notifications

@@ -1,0 +1,9 @@
+MAS Switzerland
+An e-commerce platform for MAS, a luxury Swiss watch brand, providing an elegant online shopping experience for customers to explore, customize, and purchase premium timepieces.
+
+Role: Backend Developer (Django)
+
+Features & Challenges:
+I developed the backend APIs for product catalog management, user authentication, and order processing. I integrated the payment gateway and optimized the database queries for high-performance product searches. A major challenge was ensuring secure and efficient handling of user data, especially during transactions. I also worked on implementing an admin panel for product and order management, streamlining the operational workflow.
+
+Tech Stack: Django, Python, PostgreSQL, Stripe, Redis, AWS, Celery

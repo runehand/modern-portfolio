@@ -1,0 +1,9 @@
+Ceras Health
+A healthcare platform offering remote patient monitoring and digital health solutions to improve clinical outcomes and patient engagement. It integrates wearable devices, dashboards, and care team tools.
+
+Role: Full Stack Developer
+
+Features & Challenges:
+I developed patient and clinician dashboards with real-time health data visualization and alerts. I built secure RESTful APIs for device data ingestion and managed role-based access control across the platform. Ensuring HIPAA compliance and data security was a critical challenge throughout development. I also optimized backend services to support high data throughput from wearables.
+
+Tech Stack: React, Node.js, Express, PostgreSQL, AWS, Docker, GraphQL

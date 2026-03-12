@@ -1,0 +1,10 @@
+https://apps.apple.com/us/app/joss-main/id525522332
+
+
+An app offering a curated selection of stylish and affordable furniture and home décor. Features include virtual room previews, personalized shopping lists, and exclusive sales notifications.
+Role: React Native / iOS Developer
+Features & Challenges:
+
+Developed features such as virtual room visualization, personalized wish lists, and real-time order tracking. Integrated push notifications for sales and promotions. Challenges included optimizing the app for a vast product catalog and ensuring smooth performance across various devices.
+Tech Stack: 
+React Native, Redux, TypeScript, Firebase (Firestore, Auth), REST APIs, Push Notifications, Augmented Reality (AR) for room previews

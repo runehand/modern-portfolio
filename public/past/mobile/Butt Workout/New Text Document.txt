@@ -1,0 +1,11 @@
+https://apps.apple.com/us/app/butt-workout-fitness-at-home/id869170275?platform=iphone
+
+
+A personal trainer in your pocket for shaping, toning, and strengthening your glutes. Offers quick, effective routines designed to fit into busy schedules anytime, anywhere.
+Role: React Native / iOS Developer
+Features & Challenges:
+
+Developed core features including certified professional workouts (squats, lunges, bridges), personalized program adjustments, progress tracking, and reminder systems. Faced challenges optimizing performance for large video and image assets and ensuring seamless integration with Apple Health.
+Tech Stack: 
+
+React Native, Redux, TypeScript, Firebase (Firestore, Auth), REST APIs, Apple HealthKit, In-App Purchases

@@ -1,0 +1,11 @@
+https://www.caveworld.com/
+
+CaveWorld
+A visually immersive web experience built for a blockchain-based fantasy game, featuring rich storytelling, NFT integration, and real-time 3D environments powered by WebGL.
+
+Role: Front-End Developer
+
+Features & Challenges:
+I implemented interactive 3D elements and animations using Three.js, enhancing the storytelling and user engagement on the landing page. I worked on performance optimization to ensure smooth rendering across devices despite heavy graphical content. A major challenge was maintaining high frame rates while integrating real-time NFT data into the 3D world. I also ensured compatibility with modern browsers and responsive behavior across screen sizes.
+
+Tech Stack: Three.js, React, GLSL, JavaScript, WebGL, GSAP, HTML/CSS

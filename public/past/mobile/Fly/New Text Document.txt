@@ -1,0 +1,76 @@
+https://apps.apple.com/us/app/fly-delta/id388491656
+
+Fly Delta
+
+A comprehensive travel app for Delta Air Lines that allows users to book flights, check in, track baggage, and receive real-time travel updates for a seamless journey experience.
+Role: Swift / iOS Developer
+Features & Challenges:
+
+Implemented key features including flight booking, mobile check-in, and baggage tracking. Integrated push notifications and Apple Wallet boarding passes. Challenges included optimizing performance for live flight data and ensuring smooth, reliable experiences across devices.
+
+Tech Stack: 
+Swift, SwiftUI, UIKit, Combine, Core Data, URLSession, Push Notifications, Apple Wallet, REST APIs, WidgetKit, Live Activities
+
+======================================content for upwork===================================
+
+# Fly Delta — iOS App
+
+The Fly Delta app is Delta Air Lines’ flagship mobile experience, enabling millions of users to manage trips, check in, track flights and baggage, and access personalized travel services in real time. The project focused on ensuring high performance, scalability, and smooth user experience across global markets.
+
+---
+
+## Project Overview
+
+As an **iOS Developer**, I contributed to the modernization and feature expansion of the Fly Delta app.
+My work involved implementing core flight features, optimizing performance for real-time data, and integrating native iOS capabilities such as **Apple Wallet**, **Push Notifications**, and **Live Activities** for lock-screen updates.
+
+The goal was to create a **responsive, reliable, and accessible travel companion** that performs seamlessly, even under variable network conditions.
+
+---
+
+## Technical Contributions
+
+* Developed flight booking and check-in flows using **UIKit** with a modular, reusable component architecture.
+* Integrated **Apple Wallet (PKPassKit)** for boarding passes, supporting automatic updates when flight information changed.
+* Built **Live Activities** and **WidgetKit** components to surface real-time flight and gate information directly on the lock screen.
+* Implemented **Combine**-based reactive pipelines for updating flight status and notifications without blocking the main thread.
+* Engineered **Core Data** persistence for offline access to itineraries and trip details.
+* Integrated **Push Notifications** and **background fetch** for live flight updates and gate change alerts.
+* Refactored legacy networking layers using **URLSession** and a typed, asynchronous API client.
+* Applied **Instruments** for profiling and performance tuning to ensure consistent 60 FPS interactions.
+
+---
+
+## Engineering Focus
+
+Reliability and responsiveness were top priorities.
+I introduced structured concurrency and optimized data synchronization to minimize redundant API calls.
+UI performance was improved by deferring layout work and caching heavy assets such as airport maps and flight history.
+
+Error handling was re-architected with custom domain-level responses, allowing graceful fallback when offline or when the server returned partial data.
+Accessibility compliance (VoiceOver, Dynamic Type, and contrast) was verified on all major flows.
+
+---
+
+## Tooling & Process
+
+* **Language:** Swift
+* **Frameworks:** UIKit, Combine, Core Data, WidgetKit, PKPassKit
+* **Networking:** URLSession, REST APIs
+* **CI/CD:** Fastlane, XCTest, internal QA builds via TestFlight
+* **Version Control & Collaboration:** Git, Agile sprints with design and backend teams
+
+---
+
+## Outcome
+
+The updated Fly Delta app delivered a faster, more reliable, and visually refined user experience.
+Users benefited from instant flight updates, smoother check-in flows, and offline access to essential travel data.
+The release contributed to higher user retention and improved App Store ratings, reinforcing Delta’s commitment to seamless digital travel.
+
+---
+
+**Keywords:**
+`Swift`, `UIKit`, `Combine`, `Core Data`, `Apple Wallet`, `WidgetKit`, `Live Activities`, `REST APIs`, `iOS`, `Performance Optimization`, `Accessibility`, `Concurrency`, `Push Notifications`
+
+---

@@ -1,0 +1,9 @@
+HAPE
+A premium NFT fashion brand and lifestyle platform featuring high-fidelity 3D avatars, immersive visuals, and community-focused digital experiences.
+
+Role: Front-End Developer
+
+Features & Challenges:
+I developed immersive 3D components using Three.js to showcase HAPE avatars and animations with smooth performance across devices. I contributed to building interactive sections like the avatar viewer, roadmap, and minting interface. One of the main challenges was balancing visual complexity with performance and loading speed. I also optimized the site for mobile responsiveness and integrated Web3 wallet connectivity.
+
+Tech Stack: Three.js, React, Next.js, WebGL, GSAP, Tailwind CSS, WalletConnect, Web3.js
